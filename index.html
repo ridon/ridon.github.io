@@ -11,15 +11,9 @@
   <title>Ridon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png" />
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.css">
-  <link rel="stylesheet" href="css/owl.theme.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/modernizr.custom.32033.js"></script>
+  <link rel="stylesheet" href="assets/css/ridon.min.css">
 
   <!--[if IE]><script type="text/javascript" src="js/excanvas.compiled.js"></script><![endif]-->
 
@@ -34,72 +28,162 @@
 
 <body>
 
-  <!-- Wrap all page content here -->
-  <div id="wrap">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Ridon</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#tentang">Tentang Ridon</a></li>
+          <li><a href="#fitur">Fitur Unggulan</a></li>
+          <li><a href="#perangkat">Dukungan Perangkat</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-    <header class="masthead">
-      <div class="slider-container" id="slider">
-        <div class="container">
-          <div class="row mh-container">
-            <div class="col-md-10 col-md-push-1" id="about">
-              <img src="img/logo.png" class="ridon-logo">
-              <h4 class="ridon-text">
-                <a href="https://github.com/ridon">Ridon</a> is mobile operating system built on top of
-                <span class="ridon-strikethrough">Replicant</span>, <span class="ridon-strikethrough">CyanogenMod</span>,
-                LineageOS and Android Open Source Project.
-              </h4>
-            </div>
-            <div class="col-sm-10 col-sm-push-1 col-xs-12 mh-slider">
-              <div class="row">
-                <div class="col-md-3">
-                </div>
-                <div class="col-md-6">
-                  <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+  <div class="parallax-container section scrollspy" id="tentang">
+    <div class="section">
+      <div class="container center-align">
+        <br>
+        <img src="assets/img/logo.png" alt="Ridon Logo">
+        <h4 class="white-text">
+          <a href="https://github.com/ridon">Ridon</a> adalah sistem operasi perangkat bergerak yang dibangun diatas
+          <span class="strikethrough">Replicant</span>, <span class="strikethrough">CyanogenMod</span>,
+          LineageOS dan Android Open Source Project.
+        </h4>
+      </div>
+    </div>
+    <div class="parallax">
+      <img src="assets/img/bk.jpg" alt="Background">
+    </div>
+  </div>
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner ridon-slide">
-                      <div class="item active">
-                        <img src="img/slide3.png" class="img-responsive">
-                      </div>
-                      <div class="item">
-                        <img src="img/slide1.png" class="img-responsive">
-                      </div>
-                      <div class="item">
-                        <img src="img/slide2.png" class="img-responsive">
-                      </div>
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-slider" role="button" data-slide="prev">
-                      <span class="slider-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-slider" role="button" data-slide="next">
-                      <span class="slider-right"></span>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                </div>
-              </div>
-            </div>
+  <div class="container section scrollspy" id="fitur">
+    <div class="row">
+      <div class="col s12 center-align">
+        <h3>Fitur Unggulan</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 l4">
+        <img src="assets/img/slide2.png" alt="Fitur Unggulan">
+      </div>
+      <div class="col s12 l8">
+        <div class="row center-align">
+          <div class="col s12 m2 l4">
+            <i class="large material-icons">settings</i>
+            <p>Pilihan Pengaturan yang Lebih Lengkap</p>
+          </div>
+          <div class="col s12 m2 l4">
+            <i class="large material-icons">dashboard</i>
+            <p>Menu yang Sangat Mudah Digunakan</p>
+          </div>
+          <div class="col s12 m2 l4">
+            <i class="large material-icons">child_care</i>
+            <p>Dilengkapi Parental Lock</p>
           </div>
         </div>
-
-    </header>
-
+        <div class="row center-align">
+          <div class="col s12 m2 l4">
+            <i class="large material-icons">fingerprint</i>
+            <p>Sensor Sidik Jari untuk Perangkat Tertentu</p>
+          </div>
+          <div class="col s12 m2 l4">
+            <i class="large material-icons">nfc</i>
+            <p>Dukungan NFC untuk Perangkat Tertentu</p>
+          </div>
+          <div class="col s12 m2 l4">
+            <i class="large material-icons">done</i>
+            <p>Kebebasan Untuk Anda</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
+  <div class="container section scrollspy" id="perangkat">
+    <div class="row">
+      <div class="col s12 center-align">
+        <h3>Dukungan Perangkat</h3>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col s12">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab col s3"><a class="active" href="#bacon">OnePlus One</a></li>
+        <li class="tab col s3"><a href="#bullhead">Nexus 5X</a></li>
+        <li class="tab col s3"><a href="#falcon">Moto G</a></li>
+        <li class="tab col s3"><a href="#ferrari">Xiaomi Mi4i</a></li>
+        <li class="tab col s3"><a href="#other">Selengkapnya</a></li>
+      </ul>
+    </div>
+    <div id="bacon" class="col s12">
+      <div class="col s12 l8">
+        <h5>OnePlus One</h5>
+        <p>Codename: Bacon</p>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/bacon/ridon-7.0.0-RC0-bacon.zip">Unduh</a>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/bacon/ridon_bacon-ota-c8d3d581e0.zip">Unduh OTA</a>
+      </div>
+      <div class="col s12 l4">
+        <img src="assets/img/bacon.jpg" alt="OnePlus One">
+      </div>
+    </div>
+    <div id="bullhead" class="col s12">
+      <div class="col s12 l8">
+        <h5>Nexus 5X</h5>
+        <p>Codename: Bullhead</p>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/bullhead/ridon-7.0.0-RC0-bullhead.zip">Unduh</a>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/bullhead/ridon_bullhead-ota-02098a6b74.zip">Unduh OTA</a>
+      </div>
+      <div class="col s12 l4">
+        <img src="assets/img/bullhead.jpg" alt="Nexus 5X">
+      </div>
+    </div>
+    <div id="falcon" class="col s12">
+      <div class="col s12 l8">
+        <h5>Motorola Moto G (generasi pertama)</h5>
+        <p>Codename: Falcon</p>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/falcon/ridon-7.0.0-RC0-falcon.zip">Unduh</a>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/falcon/ridon_falcon-ota-6c6ad16d4e.zip">Unduh OTA</a>
+      </div>
+      <div class="col s12 l4">
+        <img src="assets/img/falcon.jpg" alt="Motorola Moto G">
+      </div>
+    </div>
+    <div id="ferrari" class="col s12">
+      <div class="col s12 l8">
+        <h5>Xiaomi Mi4i</h5>
+        <p>Codename: Ferrari</p>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/ferrari/ridon-7.0.0-RC0-ferrari.zip">Unduh</a>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/ferrari/ridon_ferrari-ota-40e6c9d4bd.zip">Unduh OTA</a>
+      </div>
+      <div class="col s12 l4">
+        <img src="assets/img/ferrari.jpg" alt="Xiaomi Mi41">
+      </div>
+    </div>
+    <div id="other" class="col s12">
+      <div class="col s12 l8">
+        <h5>Selengkapnya</h5>
+        <a class="waves-effect waves-light btn" href="http://download.ridon.id/">Halaman Unduhan</a>
+      </div>
+      <div class="col s12 l4">
+        <img src="assets/img/slide1.png" alt="Other">
+      </div>
+    </div>
+  </div>
+  </div>
 
-    <!-- jQuery REVOLUTION Slider  -->
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <footer class="page-footer">
+    <!-- Jatahnya Sponsor -->
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 Ridon
+        <a class="grey-text text-lighten-4 right" href="https://github.com/ridon">Ridon</a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/script.js"></script>
-
+  <script type="text/javascript" src="assets/js/ridon.min.js"></script>
 </body>
 
 </html>

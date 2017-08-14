@@ -1,0 +1,38 @@
+{
+  "name": "ridon.github.io",
+  "version": "1.0.0",
+  "description": "Ridon Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendz/ridon.github.io.git"
+  },
+  "keywords": [
+    "ridon",
+    "android",
+    "indonesia"
+  ],
+  "author": "Ridon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sendz/ridon.github.io/issues"
+  },
+  "homepage": "https://github.com/sendz/ridon.github.io#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat-util": "^0.5.5",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-jshint": "^2.0.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1"
+  }
+}

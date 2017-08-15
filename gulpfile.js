@@ -10,6 +10,7 @@ var concatUtil = require('gulp-concat-util')
 var plumber = require('gulp-plumber')
 var deploy = require('gulp-gh-pages')
 var eventStream = require('event-stream')
+var htmlMinify = require('gulp-htmlmin')
 
 gulp.task('default', ['watch', 'copy-fonts', 'copy-images', 'build-js'])
 
@@ -61,6 +62,7 @@ gulp.task('build-deploy', ['build-css', 'build-js', 'copy-fonts', 'copy-images']
     gulp.src('assets/**/*')
       .pipe(gulp.dest('dist/assets')),
     gulp.src('index.html')
+      .pipe(htmlMinify({collapseWhitespace: true}))
       .pipe(gulp.dest('dist')),
     gulp.src('CNAME')
       .pipe(gulp.dest('dist'))

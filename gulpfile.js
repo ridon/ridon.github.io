@@ -11,6 +11,7 @@ var plumber = require('gulp-plumber')
 var deploy = require('gulp-gh-pages')
 var eventStream = require('event-stream')
 var htmlMinify = require('gulp-htmlmin')
+var removeCssComments = require('gulp-strip-css-comments')
 
 gulp.task('default', ['watch', 'copy-fonts', 'copy-images', 'build-js'])
 
@@ -31,6 +32,7 @@ gulp.task('build-css', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename({basename: 'ridon', suffix: '.min'}))
+    .pipe(removeCssComments({preserve: false}))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('assets/css'))
 })

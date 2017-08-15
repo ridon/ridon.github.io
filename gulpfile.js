@@ -15,7 +15,7 @@ gulp.task('default', ['watch', 'copy-fonts', 'copy-images', 'build-js'])
 
 gulp.task('deploy', ['build-deploy'], function () {
   return gulp.src(['dist/**/*'])
-    .pipe(deploy({origin: 'origin', branch: 'gh-pages'}))
+    .pipe(deploy({origin: 'origin', branch: 'master'}))
 })
 
 gulp.task('jshint', function() {

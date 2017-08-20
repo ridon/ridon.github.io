@@ -25,6 +25,7 @@
     "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-concat-util": "^0.5.5",
+    "gulp-connect": "^5.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-htmlmin": "^3.0.0",
     "gulp-jshint": "^2.0.4",
@@ -37,6 +38,7 @@
     "gulp-util": "^3.0.8",
     "jquery-lazyload": "^1.9.7",
     "jshint": "^2.9.5",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "opn": "^5.1.0"
   }
 }

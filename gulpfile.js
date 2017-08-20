@@ -12,8 +12,13 @@ var deploy = require('gulp-gh-pages')
 var eventStream = require('event-stream')
 var htmlMinify = require('gulp-htmlmin')
 var removeCssComments = require('gulp-strip-css-comments')
+var connect = require('gulp-connect')
+var opn = require('opn')
 
-gulp.task('default', ['watch', 'copy-fonts', 'copy-images', 'build-js'])
+gulp.task('default', ['watch', 'copy-fonts', 'copy-images', 'build-js', 'build-css'], function () {
+  connect.server()
+  opn('http://localhost:8080')
+})
 
 gulp.task('deploy', ['build-deploy'], function () {
   return gulp.src(['dist/**/*'])

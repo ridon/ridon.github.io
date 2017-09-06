@@ -1,16 +1,19 @@
 language: node_js
-before_deploy: 
-  - git config --global user.email publish@travis.github
-  - git config --global user.name "Travis"
-  - git remote set-url origin https://${RIDON_GITHUB_TOKEN}@github.com/ridon/ridon.github.io.git  
+before_deploy:
+- git config --global user.email publish@travis.github
+- git config --global user.name "Travis"
+- git remote set-url origin https://${RIDON_GITHUB_TOKEN}@github.com/ridon/ridon.github.io.git
 deploy:
-  - edge: true
-    github_token: ${RIDON_GITHUB_TOKEN}
-    skip_cleanup: true
-    provider: script
-    before_script: 
-      - npm install
-      - npm install --global gulp-cli
-    script: gulp deploy
-    on:
-      branch: development
+- edge: true
+  github_token: "${RIDON_GITHUB_TOKEN}"
+  skip_cleanup: true
+  provider: script
+  before_script:
+  - npm install
+  - npm install --global gulp-cli
+  script: gulp deploy
+  on:
+    branch: development
+env:
+  global:
+    secure: ZdH/0mpE1hRaAL/bX7GW0qYnZ8asoZdiHh/6SlU3QwCLuuuJsVzfBCVxDgrnRb2VaC4f2KuXdpgRU+urN068kGyA7IjMmWDdoZr5xLen5yIgzoGQNLAFEUHoXQ/3Gnt4pKWzC02rPbmyW0RO0ef7XJN5OWzr/652FTBukMP8MJ04x45IRsxNU7AKrSzoPBRTK+H0RZnU9eqlTEgGLrPbmzO2hX/bP69dx6/q1t7i4/kRpI3C06dr6kn52M8JSREQU33xuHVyw0s5sa2lsvl9ZbxgAq3yfdzAdCpmwx58mFDgc+hOp9CXJ6F5o7uSv/0AHFOkVbpFk1eYm/TVL2gp74/wX8FXaKfkaQrNnUvzotrsoiwhm5UBUqJYYm7arzrIe46j+6OcH3ZOLBzEKiQLdGVHMuJz6FrlXy8Oiht3BzRYznG9vBXewtvr0W7ZugU5GOvzVmlQqLsxdD1DE4y1VPHw9B//bNJQKYl57sHaizbH45PyloBwVgPS7aHrND0jQkX+8Hej4Y7d8cs4kDBK7TZJdDcommfc2LXQfNyNI0tt55ag7U4hQtIPwNAaQssbPX1UyvTJXIb5ZCdYiLmE0VlWTzbklQ9uyT+ZfGULjUKZqgTgx9WJM8HOREXMC/789X6/FXDrA2LgcwjlguMSQynqr0Sg0NqYrrv4t1yOJFo=

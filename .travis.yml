@@ -1,4 +1,6 @@
 language: js
+deploy:
+  github_token: e78b7b5c86d986c0c30ab143c9dda953750f0633
 branches:
   only:
     - development

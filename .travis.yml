@@ -4,4 +4,5 @@ branches:
     - development
 before_install:
   - npm install
+  - npm install --global gulp-cli
 script: gulp deploy

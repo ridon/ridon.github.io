@@ -1,5 +1,6 @@
 language: node_js
-before_deploy: git config --global user.email publish@travis.github && git config --global user.name "Travis"
+before_deploy: 
+  - git config --global user.email publish@travis.github && git config --global user.name "Travis"
 deploy:
   - edge: true
     github_token: ${RIDON_GITHUB_TOKEN}
@@ -8,6 +9,7 @@ deploy:
     before_script: 
       - npm install
       - npm install --global gulp-cli
+      - git remote set-url origin https://${RIDON_GITHUB_TOKEN}@github.com/ridon/ridon.github.io.git
     script: gulp deploy
     on:
       branch: development

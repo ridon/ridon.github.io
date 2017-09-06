@@ -1,6 +1,5 @@
 var config = require('./gulpfile.config.js')
 var gulp = require('gulp')
-var gulpUtil = require('gulp-util')
 var jshint = require('gulp-jshint')
 var sass = require('gulp-sass')
 var sourcemaps = require('gulp-sourcemaps')
@@ -13,7 +12,9 @@ var eventStream = require('event-stream')
 var htmlMinify = require('gulp-htmlmin')
 var removeCssComments = require('gulp-strip-css-comments')
 
-gulp.task('default', ['watch', 'copy-fonts', 'copy-images', 'build-js'])
+gulp.task('default', ['watch', 'build'])
+
+gulp.task('build', ['copy-fonts', 'copy-images', 'build-js', 'build-css'])
 
 gulp.task('deploy', ['build-deploy'], function () {
   return gulp.src(['dist/**/*'])
@@ -29,7 +30,6 @@ gulp.task('jshint', function() {
 gulp.task('build-css', function() {
   return gulp.src('source/sass/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(rename({suffix: '.min'}))
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(rename({basename: 'ridon', suffix: '.min'}))
     .pipe(removeCssComments({preserve: false}))
@@ -42,7 +42,6 @@ gulp.task('build-js', function() {
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(concatUtil('app.js', {sep: ';'}))
-    .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(rename({basename: 'ridon', suffix: '.min'}))
     .pipe(sourcemaps.write('maps'))
@@ -72,7 +71,6 @@ gulp.task('build-deploy', ['build-css', 'build-js', 'copy-fonts', 'copy-images']
 })
 
 gulp.task('watch', function() {
-  // gulp.watch('source/js/**/*.js', ['jshint'])
   gulp.watch('gulpfile.config.js', ['build-js'])
   gulp.watch('source/js/**/*.js', ['build-js'])
   gulp.watch('source/sass/**/*.scss', ['build-css'])

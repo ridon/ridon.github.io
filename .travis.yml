@@ -4,5 +4,4 @@ branches:
     - development
 before_install:
   - npm install
-  - npm install gulp
 script: gulp deploy

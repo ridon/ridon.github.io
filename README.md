@@ -1,3 +1,6 @@
+# ridon.id
+[![Build Status](https://secure.travis-ci.org/ridon/ridon.github.io.svg?branch=development)](https://travis-ci.org/ridon/ridon.github.io)
+
 # Halaman Muka Website Ridon
 
 Repositori ini berisi halaman muka dari website [Ridon](http://ridon.id/)

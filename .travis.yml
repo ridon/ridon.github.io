@@ -1,11 +1,11 @@
-language: javascript
-before_deploy: 
-  - git config --global user.email publish@travis.github && git config --global user.name "Travis"
-  - npm install
-  - npm install --global gulp-cli
+language: node_js
 deploy:
   github_token: e78b7b5c86d986c0c30ab143c9dda953750f0633
   skip_cleanup: true
+  before_script:
+    - git config --global user.email publish@travis.github && git config --global user.name "Travis"
+    - npm install
+    - npm install --global gulp-cli
   script: gulp deploy
   on:
     branch: development

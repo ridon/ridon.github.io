@@ -1,3 +1,4 @@
+language: js
 branches:
   only:
     - development

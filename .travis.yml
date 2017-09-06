@@ -1,4 +1,6 @@
-language: node_js
+branches:
+  only:
+    - development
 before_deploy: 
   - git config --global user.email publish@travis.github && git config --global user.name "Travis"
   - npm install
@@ -9,6 +11,3 @@ deploy:
   script: gulp deploy
   on:
     branch: development
-branches:
-  only:
-    - development

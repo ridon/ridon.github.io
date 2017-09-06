@@ -4,6 +4,9 @@ deploy:
   - edge: true
     skip_cleanup: true
     provider: script
+    before_script: 
+      - npm install
+      - npm install --global gulp-cli
     script: gulp deploy
     on:
       branch: development

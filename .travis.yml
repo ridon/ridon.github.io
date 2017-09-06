@@ -1,0 +1,7 @@
+language: javascript
+branches:
+  only:
+    - development
+before_install:
+  - npm install
+script: gulp deploy

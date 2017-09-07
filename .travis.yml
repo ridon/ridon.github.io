@@ -5,7 +5,6 @@ before_deploy:
 - git remote set-url origin https://${RIDON_GITHUB_TOKEN}@github.com/ridon/ridon.github.io.git
 deploy:
 - edge: true
-  github_token: "${RIDON_GITHUB_TOKEN}"
   skip_cleanup: true
   provider: script
   before_script:

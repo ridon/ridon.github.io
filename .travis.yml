@@ -10,7 +10,7 @@ deploy:
   before_script:
   - npm install
   - npm install --global gulp-cli
-  - npm install hoek
+  - npm install node-sass request@2.81.0
   script: gulp deploy
   on:
     branch: development

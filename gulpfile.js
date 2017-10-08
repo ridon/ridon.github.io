@@ -62,7 +62,7 @@ gulp.task('build-deploy', ['build-css', 'build-js', 'copy-fonts', 'copy-images']
   return eventStream.concat(
     gulp.src('assets/**/*')
       .pipe(gulp.dest('dist/assets')),
-    gulp.src('index.html')
+    gulp.src('*.html')
       .pipe(htmlMinify({collapseWhitespace: true}))
       .pipe(gulp.dest('dist')),
     gulp.src('CNAME')
